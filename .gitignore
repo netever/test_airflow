@@ -1,1 +1,5 @@
 /.env
+dags/__pycache__/data_ingestion_tasks.cpython-311.pyc
+/logs/*
+logs/dag_processor_manager/dag_processor_manager.log
+logs/scheduler/latest

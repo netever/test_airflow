@@ -27,7 +27,7 @@ def data_ingestion_pipeline():
         
         @task
         def read_csv_task():
-            df = pd.read_csv('/opt/airflow/dags/comments.csv')
+            df = pd.read_csv('/opt/airflow/dags/comments.csv', sep=';')
             return df.to_dict('records')
 
         @task
@@ -37,7 +37,7 @@ def data_ingestion_pipeline():
 
         @task
         def fetch_api_data():
-            response = requests.get('https://jsonplaceholder.typicode.com/users')
+            response = requests.get('https://jsonplaceholder.typicode.com/posts')
             df = pd.DataFrame(response.json())
             return df.to_dict('records')
 

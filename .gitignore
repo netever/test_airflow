@@ -4,3 +4,5 @@ logs/*
 logs/dag_processor_manager/dag_processor_manager.log
 logs/scheduler/latest
 dags/__pycache__/*
+for_delete/*
+scripts/test_pd.py
